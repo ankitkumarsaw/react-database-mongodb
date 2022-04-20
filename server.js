@@ -8,6 +8,8 @@ app.use(express.json());
 app.use('/todo',verifyToken ,todoRoutes);
 app.use('/user',userRoutes);
 
+app.use(express.static(__dirname + '/public'))
+
 const PORT = 4000;
 
 app.listen(PORT, () => {
